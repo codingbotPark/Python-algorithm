@@ -43,18 +43,17 @@ for i in range(1,10000):
 
 
 # https://github.com/jongpark1234 코드
-#
-num = 0
-numlist = []
-while True:
-    num += 1
-    temp = num + sum(list(map(int, str(num))))
-    if num > 10000:
-        break
-    else:
-        numlist.append(temp)
-# 요기까지 nulist에 셀프넘버가 아닌 수들을 넣는다
-for i in range(1, 10001):
-    if numlist.count(i) == 0:
-        # 셀프넘버들은 배열에 없기 때문에 출력
-        print(i)
+# num = 0
+# numlist = []
+# while True:
+#     num += 1
+#     temp = num + sum(list(map(int, str(num))))
+#     if num > 10000:
+#         break
+#     else:
+#         numlist.append(temp)
+# # 요기까지 nulist에 셀프넘버가 아닌 수들을 넣는다
+# for i in range(1, 10001):
+#     if numlist.count(i) == 0:
+#         # 셀프넘버들은 배열에 없기 때문에 출력
+#         print(i)
