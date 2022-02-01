@@ -5,15 +5,15 @@
 # 기준으로 출력할 문자.join(문자열리스트) 의 형태이고,
 # 문자열리스트여야만 한다
 
-# a,b = input().split()
-# a = list(map(int,a))
-# b = list(map(int,b))
-# a = a[::-1]
-# b = b[::-1]
-# if a > b:
-#     print("".join(map(str,a)))
-# else:
-#     print("".join(map(str,b)))
+a,b = input().split()
+a = list(map(int,a))
+b = list(map(int,b))
+a = a[::-1]
+b = b[::-1]
+if a > b:
+    print("".join(map(str,a)))
+else:
+    print("".join(map(str,b)))
 
 # 출처 : https://includestdio.tistory.com/32
 # 리스트에 reverse를 사용하면 배열을 뒤집는다

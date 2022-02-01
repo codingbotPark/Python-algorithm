@@ -52,21 +52,21 @@ else:
 # 1곱하기 1,2,3,4
 
 
-# # https://deokkk9.tistory.com/11 코드
-# # 나와 같은 방식으로 풀었다
-# # 1시간 반정도 고민해서 푼 문제인데 나만 이렇게 푼게 아니였다
-# X=int(input())
+# https://deokkk9.tistory.com/11 코드
+# 나와 같은 방식으로 풀었다
+# 1시간 반정도 고민해서 푼 문제인데 나만 이렇게 푼게 아니였다
+X=int(input())
 
-# line=1
-# while X>line:
-#     X-=line
-#     line+=1
+line=1
+while X>line:
+    X-=line
+    line+=1
     
-# if line%2==0:
-#     a=X
-#     b=line-X+1
-# else:
-#     a=line-X+1
-#     b=X
+if line%2==0:
+    a=X
+    b=line-X+1
+else:
+    a=line-X+1
+    b=X
     
-# print(a, '/', b, sep='')
+print(a, '/', b, sep='')
