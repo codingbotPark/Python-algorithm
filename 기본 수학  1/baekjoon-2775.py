@@ -68,3 +68,22 @@ for i in range(caseNum):
 # 명  1   6   21  56  126 212     46증가
 # 호 501 502 503 504 505      120증가
 # 명  1   7   28  84  212 332
+
+# https://github.com/jongpark1234 코드
+from sys import stdin
+for _ in range(int(input())):
+    k = int(stdin.readline())
+    n = int(stdin.readline())
+    f0 = [x for x in range(1, n + 1)] 
+    # 입력받은 n까지의 수가 각각들어간 일차원 배열을 만들어서
+    for i in range(k):
+        for j in range(1, n):
+            f0[j] += f0[j - 1]
+            # 계산을 하는 과정이 n번째 인덱스 수를 구한다고 치면
+            # array[-1], 즉 전의 수이자 자신의 전 호까지의 사람 수의 합
+            # 더하기
+            # array[n] 전에 있던 자신의 수를 더하기
+            # 이렇게 일차원 배열로 계산을 할 수 있었다
+    print(f0[-1])
+
+
