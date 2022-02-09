@@ -10,27 +10,53 @@
 # 출처 : https://www.youtube.com/watch?v=5ypkoEgFdH8&list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&index=25
 
 
-# 1부터 num * 2 만큼의 배열을 에라토스테네스의 체를 사용해 소수만 남도록 하고
-# (num + 1) ~ (num * 2) 까지의 범위 중 소수의 개수(True)를 구한다
+array = ([True] * ((123456 * 2) + 1))
+for i in range(2,(len(array) // 2) + 1):
+    if array[i] == True: # True일 때
+        j = i + i
+        while j < len(array):
+            array[j] = False
+            j += i
+
 while 1:
     num = int(input())
     if num == 0:
         break
-    # 2차원 배열을 만들어준다
-    # True = 있는 수 False = 없는 수
-    # array = [True] * ((num * 2) + 1)# n-1 인덱스
-    array = [True] * ((num * 2))# n-1 인덱스
-    for i in range(2,(len(array) // 2) + 1): # 배열을 False로 만듬
-        if i == True: # True일 때
-            j = i * 2
-            while j < len(array):
-                array[j] = False
-                j += i
     primeNum = 0
-    for i in range(num,len(array)):
+    for i in range(num+1,(num*2)+1):
         if array[i]:
             primeNum += 1
     print(primeNum)
+
+
+# 시행착오
+# # pypy3 로 했을 때 맞는 코드
+# # 1부터 num * 2 만큼의 배열을 에라토스테네스의 체를 사용해 소수만 남도록 하고
+# # (num + 1) ~ (num * 2) 까지의 범위 중 소수의 개수(True)를 구한다
+# while 1:
+#     num = int(input())
+#     if num == 0:
+#         break
+#     # 2차원 배열을 만들어준다
+#     # True = 있는 수 False = 없는 수
+#     # array = [True] * ((num * 2) + 1)# n-1 인덱스
+#     # for i in range(2,(len(array) // 2) + 1): # 배열을 False로 만듬
+#     # array = [True] * (num * 2)
+#     # for i in range(1,(len(array) // 2) + 1): # 배열을 False로 만듬
+#     # array = [False] + ([True] * (num * 2))
+
+#     array = ([True] * ((num * 2) + 1))
+#     for i in range(2,(len(array) // 2) + 1):
+#         if array[i] == True: # True일 때
+#             j = i + i
+#             while j < len(array):
+#                 array[j] = False
+#                 j += i
+#     primeNum = 0
+#     for i in range(num+1,len(array)):
+#         if array[i]:
+#             primeNum += 1
+#     print(primeNum)
 
 # 시행착오
 # 시간초과
