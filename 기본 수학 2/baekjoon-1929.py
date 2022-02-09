@@ -9,7 +9,7 @@ def isPrime(i):
         if i % j == 0:
             return 0
     return 1
-    
+
 m,n = map(int,input().split())
 for i in range(m,n+1):
     if isPrime(i):
