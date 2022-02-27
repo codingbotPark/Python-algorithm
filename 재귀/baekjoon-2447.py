@@ -1,24 +1,23 @@
 # 다시 2차원 배열을 만드는 느낌에서, 각 자리를 판별하기
 
-from math import sqrt
-
 # 3으로 나눌 때 = 1
 # 6으로 나눌 때 = 3, 4, 5
 # 9로 나눌 때 = 1
 
 def isStar(i,j):
-    # for c in range(numTimes): # 3의 n승의 수로 만들고 n번만큼 반복
-        # for C in range(1,c+2):
-            # if i % (c * 3) == C+1 and j % (c * 3) == C+1:
-            #     return 0
-            # if i % (c * 3) == 1:
-            #     return 0
-    for c in range(1,numTimes+1):
-        for C in range(3 ** (c-1)):
-            if i % (c * 3) == C + 1 and j % (c * 3) == C:
-                return 0
+    # for c in range(1,numTimes+1):
+    #     cTime = c ** 3
+    #     for C in range(3 ** (c-1)):
+    #         if i % cTime > (cTime ):
+    #             return 0
+    # return 1
+    for c in range(1,numTimes + 1):
+        cTime = c ** 3 # 3의 제곱
+        # if i % cTime > 
+        if (((i / cTime)%1 > 1/3) and ((i / cTime)%1 < 2/3)) and\
+        (((j / cTime)%1 > 1/3) and ((j / cTime)%1 < 1)):
+            return 0
     return 1
-
 
 num = int(input())
 temp = num
@@ -29,14 +28,13 @@ while temp > 1:
 if numTimes: # num이 1이 아닐 때
     for i in range(num):
         for j in range(num):
-            if isStar(i,j):
+            if isStar(i+1,j+1):
                 print("*",end="")
             else:
                 print(" ",end="")
         print()
 else: # num이 1일 때
     print("*")
-
 
 
 
