@@ -9,30 +9,36 @@
 def isStar(i,j):
     for c in range(1,numTimes+1):
         cTime = 3 ** c  # 3의 n제곱
-
-        if (i % cTime >= (cTime / 3)) and (i % cTime < ((cTime / 3) * 2)):
-            if (j % cTime >= (cTime / 3)) and (j % cTime < ((cTime / 3) * 2)):
-                return 0
-
-
+        dCTime = cTime / 3
+        if ((i % cTime >= dCTime) and (i % cTime < (dCTime * 2))) and ((j % cTime >= dCTime) and (j % cTime < (dCTime * 2))):
+            return 0
     return 1
 
 num = int(input()) 
 temp = num
 numTimes = 0
+
 while temp > 1:
     temp /= 3
     numTimes+=1
-if numTimes: # num이 1이 아닐 때
-    for i in range(num):
-        for j in range(num):
-            if isStar(i,j):
-                print("*",end="")
-            else:
-                print(" ",end="")
-        print()
-else: # num이 1일 때
-    print("*")
+for i in range(num):
+    for j in range(num):
+        if isStar(i,j):
+            print("*",end="")
+        else:
+            print(" ",end="")
+    print()
+
+# if numTimes: # num이 1이 아닐 때
+#     for i in range(num):
+#         for j in range(num):
+#             if isStar(i,j):
+#                 print("*",end="")
+#             else:
+#                 print(" ",end="")
+#         print()
+# else: # num이 1일 때
+#     print("*")
 
 
 
