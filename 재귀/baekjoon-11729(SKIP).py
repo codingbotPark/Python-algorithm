@@ -1,3 +1,8 @@
+
+
+
+
+
 # https://namu.wiki/w/%ED%95%98%EB%85%B8%EC%9D%B4%EC%9D%98%20%ED%83%91
 # 사실 이동 회수를 구하지 못해서 검색했다
 # 이동 회수는 2n - 1이다
@@ -6,13 +11,6 @@
 # 3 = 7, 처음이 1
 # 4 = 15, 처음이 2
 # 5 = 31, 처음이 1
-
-
-
-num = int(input())
-for i in range((2**num) - 1):
-
-
 
 # n 짜리 탑을 세우려면, n-1짜리 탑을 세워야 한다
 # (n짜리 탑을 3에 세우려면 n-1짜리 탑을 2에 세워야 한다)
@@ -69,3 +67,4 @@ for i in range((2**num) - 1):
 # for i in range(num,0,-1):
 #     one.append(i)
 # buildTower(num)
+
