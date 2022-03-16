@@ -10,7 +10,7 @@
 #             temp = array[j]
 #             array[j] = array[j + 1]
 #             array[j + 1] = temp
-# for i in range(num):
+# for i in range(num):d
 #     print(array[i])
 
 
