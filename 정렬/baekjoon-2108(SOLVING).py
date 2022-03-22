@@ -1,4 +1,12 @@
 import sys
+array = [0] * 8001
+num = int(sys.stdin.readline())
+sum = 0
+for i in range(num):
+    temp = sys.stdin.readline()
+
+
+import sys
 array1 = [] # 들어온 값을 그냥 추가
 array2 = [0] * 8001 # 들어온 값의 인덱스에 +1
 num =int(sys.stdin.readline())
@@ -42,6 +50,7 @@ if counter == 1:
 
 # 범위
 print(array1[-1] - array1[0])
+
 
 # https://puleugo.tistory.com/43
 # 파이썬에서 반올림은 오사오입 이라는 방식을 사용하는데,
