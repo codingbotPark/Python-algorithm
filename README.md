@@ -25,4 +25,12 @@
 **코드** > 
 대충 알고는 있었던 내용 > 
 시행착오와 분석과 관련된 내용 > 
-다른사람의 코드(https://github.com/jongpark1234 코드)
+다른사람의 코드(ex https://github.com/jongpark1234 코드)
+
+
+### 파일명
+기본적으로 `baekjoon-문제번호.py` 가 파일 이름이고, 특수한 경우에 `baekjoon-문제번호(경우).py` 의 형태이다
+
+경우의 예시를 보면
+`SKIP` = 넘긴문제
+`pypy3` = pypy3로 정답을 맞힌 문제
