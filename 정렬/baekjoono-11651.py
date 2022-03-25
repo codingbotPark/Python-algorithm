@@ -12,4 +12,4 @@ for i in range(case):
     print(array[i][0],array[i][1])
 
 # 람다를 사용해 정렬기준을 만들었다
-# https://ooyoung.tistory.com/59
+# https://ooyoung.tistory.com/59MIRICANVAS_ITEM_COPY_KEY
