@@ -1,8 +1,3 @@
-# baekjoon-jh05013's-course
-[baekjoon-단계별로 풀어보기](https://www.acmicpc.net/step)
-
----
-
 ## 파일 구성 정보
 
 ### 문제와 관련된 내용들 ▽
