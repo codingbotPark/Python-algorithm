@@ -16,7 +16,8 @@
 
 n,m = map(int,input().split())
 s = [] # 출력을 위한 숫자가 쌓일 스택
-visited = [False] * (n+1) # ???
+visited = [False] * (n+1) 
+# 중복되는 수를 출력하지 않기 위해
 
 def dfs():
     # 출력 될 수에 따라 조건을 걸어준다
@@ -25,14 +26,18 @@ def dfs():
         return
     
     for i in range(1, n+1):
+        # 중복되면 continue를 해줘서
+        # for문이 계속돌 수 있도록 해준다
         if visited[i]:
             continue
+        # visited를 true로 해서 중복체크를 한다
         visited[i] = True
         s.append(i)
         dfs()
+        # 출력이 끝나면 pop과 false를 해줌으로써
+        # 다시 초기화를 시켜준다
         s.pop()
         visited[i] = False
-
 dfs()
 
 
