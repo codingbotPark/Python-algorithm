@@ -5,7 +5,7 @@ for i in range(2,num+1):
 print(array[num])
 
 
-# def fibo(num):
+# def fibo(num)::
 #     if num == 1:
 #         return 0
 #     elif num == 2:
