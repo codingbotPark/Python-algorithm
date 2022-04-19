@@ -1,5 +1,5 @@
 def printWhatIsRecurDef(n):
-    plusStr = "----" * (tempNum - n)
+    plusStr = "____" * (tempNum - n)
     print(plusStr+"\"재귀함수가 뭔가요?\"")
     if n == 0:
         print(plusStr+"\"재귀함수는 자기 자신을 호출하는 함수라네\"")
