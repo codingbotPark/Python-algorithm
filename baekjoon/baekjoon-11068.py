@@ -28,7 +28,7 @@ def checkCircular(inputList):
 
 # 2~64진수까지 입력된 수를 회문인지 확인하는 함수
 def isCircular(inputValue):
-    for i in range(2,63):
+    for i in range(2,65):
         # 회문일 때 checkCircular에서 1을 리턴하고,
         # 리턴하면 if문이 실행되어 1을 리턴
         if checkCircular(toNNumber(inputValue,i)):
