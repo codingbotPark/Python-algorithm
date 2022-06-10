@@ -10,7 +10,6 @@ import sys
 for i in range(int(input())):
     command = sys.stdin.readline().split()
     if command[0] == "push":
-        # arr.insert(0,command[1])
         arr.appendleft(command[1])
     elif command[0] == "front":
         if len(arr):
