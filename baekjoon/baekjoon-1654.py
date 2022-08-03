@@ -1,10 +1,24 @@
+
+
+
 # https://aigong.tistory.com/397
 # 이분탐색을 하면 답을 구할 수 있다고 한다
 k,n = map(int,input().split())
-l = sorted([int(input()) for _ in range(k)])
+arr = sorted([int(input()) for _ in range(k)])
 
-start, end = 1, l[-1]
+start, end = 1, arr[-1]
 
+while start <= end:
+        mid = (start + end) // 2
+        lines = 0
+
+        for i in arr:
+            lines += i// mid
+        if lines >= n:
+            start = mid+1
+        else:
+            end = mid-1
+print(end)
 
 
 #  # 아래와 같은 방법이지만,
