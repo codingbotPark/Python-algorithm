@@ -22,4 +22,20 @@ def solution(participant, completion):
     return "".join(hash)
 
 
-print(solution(["mislav", "stanko", "mislav", "ana"],["stanko", "ana", "mislav"]))
+# print(solution(["mislav", "stanko", "mislav", "ana"],["stanko", "ana", "mislav"]))
+
+
+## 콜렉션 사용 예시
+# from collections import Counter
+# string = "hello world"
+# counter = Counter(string)
+# print(counter)
+# print(list(counter)[-1])
+
+
+## 콜렉션 모듈을 사용한 풀이
+# import collections
+# def solution(participant, completion):
+#     answer = (collections.Counter(participant) - collections.Counter(completion))
+#     print(list(answer.keys())[0])
+# print(solution(["mislav", "stanko", "mislav", "ana"],["stanko", "ana", "mislav"]))
