@@ -22,7 +22,28 @@ def solution(numbers, target):
     return answer
 
 # print(solution([1, 1, 1, 1, 1],3))
-print(solution([4, 1, 2, 1],4))
+# print(solution([4, 1, 2, 1],4))
+
+
+
+from itertools import permutations
+
+def solution2(dataset,num):
+    dataset = list(map(str,dataset))
+    values = list(permutations(dataset,3))
+    arr = list(map(lambda x:"".join(x),values))
+    arr.sort()
+
+    answer = -1
+    for i in arr:
+        if int(i) > num:
+            return i
+
+    return answer
+
+print(solution2([1, 1, 5], 511))
+# print(solution2([1, 2, 3], 213))
+
 
 
 # BFS 

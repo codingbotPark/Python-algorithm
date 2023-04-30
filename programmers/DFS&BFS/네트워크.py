@@ -25,3 +25,18 @@ def solution(n, computers):
 
 # print(solution(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
 print(solution(3, [[1, 1, 0], [1, 1, 1], [0, 1, 1]]))
+
+
+def dfs(graph, idx, visited):
+    visited[idx] = True
+    for i in range(len(graph)):
+        if not visited[i+1]:
+            dfs(graph,i+1,visited)
+
+
+from collections import deque
+
+q = deque([[0,1]]) # idx, cost
+while q:
+    
+        
